@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /keycloak-examples-spring-app
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          keycloak:
+            client-id: sandbox-app
+            client-secret: changeme
+            authorization-grant-type: authorization_code
+            scope: openid
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:9101/realms/sandbox
+            user-name-attribute: preferred_username
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:9101/realms/sandbox

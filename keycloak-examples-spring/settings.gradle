@@ -1,0 +1,4 @@
+rootProject.name = 'keycloak-examples-spring'
+
+include 'keycloak-examples-spring-app'
+project(':keycloak-examples-spring-app').projectDir = file('keycloak-examples-spring-app')
